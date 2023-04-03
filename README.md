@@ -1,71 +1,45 @@
-# Getting Started with Create React App
+QUESTION 1a: Google Page Component breakdown
+Google App is the Parent component; within it we have three main components;
+1. Header Component
+2. Search Section Component
+3. Footer Section
+Within these components, we have subcomponents i.e
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. HEADER COMPONENT
+i. Menu Item Components: Gmail and 
+ii. Icon components -the Google Apps component icon
+iii. Avatar component when logged in or Sign in component when not logged in.
 
-## Available Scripts
+2. SEARCH COMPONENT
+i. Logo component i.e Google logo
+ii. Search bar component
+iii. Reporting component composed of the 
+iv. Language component - lists of Google location based languages 
 
-In the project directory, you can run:
+3. FOOTER SECTION
+Section is composed of the top and bottom footer components, where
+i. Top Footer is the country
+ii. The Bottom Footer is a menu;
+Left Menu comprised of About, Advertising,Business and How Search works links
+Mid Menu the Carbon neutral link
+Right Menu comprised of Privacy, Terms and Settings
 
-### `npm start`
+QUESTION 2
+To demostrate the use of State, the input section was modified as below;
+export default function SearchBar() {
+    const [value, setValue] = useState('');
+    const onChange = (event) => {
+        setValue(event.target.value);
+    }
+    return (
+        <div ClassName="Bar">
+            <input className="searchbar" type="Text" value={value} onChange={onChange} title="Search" />
+            <a href="#"> <img className="search" src={Icon1} alt="search" /></a>
+            <a href="#"> <img className="voice" src={Icon2} alt="voice search" /></a>
+            <a href="#"> <img className="image" src={Icon3} alt="image search" /></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+        </div>
+    )
+}
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# components_props_state
